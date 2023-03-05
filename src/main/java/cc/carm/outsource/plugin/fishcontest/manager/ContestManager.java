@@ -1,6 +1,7 @@
 package cc.carm.outsource.plugin.fishcontest.manager;
 
 import cc.carm.lib.easyplugin.EasyPlugin;
+import cc.carm.outsource.plugin.fishcontest.Main;
 import cc.carm.outsource.plugin.fishcontest.conf.PluginConfig;
 import cc.carm.outsource.plugin.fishcontest.conf.PluginMessages;
 import cc.carm.outsource.plugin.fishcontest.conf.prize.ConfiguredPrize;
@@ -49,6 +50,11 @@ public class ContestManager {
 
         LocalTime now = LocalTime.now().withNano(0);
         if (PluginConfig.SCHEDULE.TIME.stream().noneMatch(s -> s.equals(now))) return; // 当前时间并非比赛开始的时间
+
+        if (Bukkit.getOnlinePlayers().size() < PluginConfig.SCHEDULE.REQUIREMENTS.MINIMUM_PLAYERS.getNotNull()) {
+            Main.info("[钓鱼大赛日程] 当前在线玩家(" + Bukkit.getOnlinePlayers().size() + ")不足以开启一场比赛，跳过此时间段。");
+            return;
+        }
 
         startContest(null); // 尝试开启比赛
     }
@@ -171,7 +177,7 @@ public class ContestManager {
         // 缓存旧数据，便于玩家查询本次开服依赖的比赛情况
         this.historyContests.put(this.runningContest.getID(), this.runningContest);
 
-        // TODO 转化为LOG形式并记录LOG存档
+        // 转化为LOG形式并记录LOG存档
 
         this.runningContest = null; // 清空比赛数据
     }
