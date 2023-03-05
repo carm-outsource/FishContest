@@ -14,18 +14,22 @@
 ![Support](https://img.shields.io/badge/Minecraft-Java%201.18--Latest-yellow)
 ![](https://visitor-badge.glitch.me/badge?page_id=FishContest.readme)
 
-
+钓鱼大赛插件。开启一场钓鱼大赛，依据重量分出胜负，并依据排名给玩家发放对应奖励。
 
 ## 功能与优势
+
+- 可配置份额的**计量单位**，无论是 长度、重量还是体积，一切都如您所愿。
+- 可配置份额的**随机方式**，支持”固定份额“、”随机范围份额“ 与 ”正态分布范围“ 。
+- 可配置定时开启比赛的时间，支持多个时间点。
+- 可依照群系的不同配置每种鱼类/物品的出现概率与份额的随机方式。
+- 提供便于玩家阅读的可翻页GUI，可以清晰的看到当前全部的玩家排名与成绩。
+- *支持比赛记录。比赛结束后将保存详细的比赛内容，包括每个玩家的成绩与奖励，以便查询。
 
 ### 优势
 
 - **轻量插件。** 适合小型服务器使用，配置简单方便。
 - **规范开发。** 插件架构符合开发规范，适合新手开发者学习。
 - **持续维护。** 新功能需求均可提交，大概率在后续开发中支持。
-    - 功能需求请 [提交Issues](https://github.com/CarmJos/FishContest/issues/new?assignees=&labels=enhancement&template=feature_issues.md&title=)
-      ，不要在帖子中提交！
-    - 提交与 “传送” 相关联的请求才大概率会被更新支持。
 
 ## [依赖](https://github.com/CarmJos/FishContest/network/dependencies)
 
@@ -49,8 +53,21 @@
 @ 管理指令 (FishContest.admin)
 - 重载插件配置文件。
 
-# back
-- 回到之前的传送位置。
+
+# stats [比赛ID]
+- 查看某场比赛的比赛情况。
+- 若不填写“比赛ID”，则会查看当前正在进行的比赛(如果有)。
+
+# start [种类] [持续时间(秒)]
+- 手动开始一场钓鱼大赛。
+- 若不填写“种类”与“时间”，将使用配置文件中的默认值。
+
+# stop
+- 手动结束并结算目前正在进行的钓鱼大赛。
+
+# suspend
+- 手动终止目前正在进行的钓鱼大赛。
+- 此操作将不会结算比赛奖励！
 ```
 
 ## 配置
@@ -72,7 +89,9 @@
 若您觉得本插件做的不错，您可以捐赠支持我，感谢您成为开源项目的支持者！
 
 由衷感谢以下支持本项目开发的朋友们：
-- 本插件由 [天际正版公益服](https://github.com/YuanYuanOwO/Minecraft-Tianji-Server) 管理员 [YuanYuan](https://github.com/YuanYuanOwO) 委托本人开发，经过授权后开源。
+
+- 本插件由 [天际正版公益服](https://github.com/YuanYuanOwO/Minecraft-Tianji-Server)
+  管理员 [YuanYuan](https://github.com/YuanYuanOwO) 委托本人开发，经过授权后开源。
 
 Many thanks to Jetbrains for kindly providing a license for me to work on this and other open-source projects.  
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/CarmJos/UserPrefix)

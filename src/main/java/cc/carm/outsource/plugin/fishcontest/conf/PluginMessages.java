@@ -66,7 +66,7 @@ public class PluginMessages extends ConfigurationRoot {
 
             public static final ConfiguredMessageList<BaseComponent[]> ADMIN = list().defaults(
                     "&6&l钓鱼大赛 &f指令帮助",
-                    "&8#&f start <持续时间> [种类] [名称]",
+                    "&8#&f start [种类] [持续时间(秒)]",
                     "&8-&7 开始一场钓鱼大赛。",
                     "&8#&f stats",
                     "&8-&7 查看当前的比赛进度。",
@@ -100,7 +100,7 @@ public class PluginMessages extends ConfigurationRoot {
             public static final ConfiguredMessageList<BaseComponent[]> NO_RUMNING_CONTEST = list().defaults(
                     "&f当前没有正在进行的钓鱼大赛。"
             ).build();
-            
+
             public static final ConfiguredMessageList<BaseComponent[]> NOT_FOUND = list().defaults(
                     "&f未找到指定的大赛数据。"
             ).build();
