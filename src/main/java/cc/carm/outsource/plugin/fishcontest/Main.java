@@ -5,10 +5,12 @@ import cc.carm.lib.easyplugin.EasyPlugin;
 import cc.carm.lib.easyplugin.gui.GUI;
 import cc.carm.lib.easyplugin.gui.paged.AutoPagedGUI;
 import cc.carm.lib.easyplugin.updatechecker.GHUpdateChecker;
+import cc.carm.lib.easyplugin.utils.MessageUtils;
 import cc.carm.lib.mineconfiguration.bukkit.MineConfiguration;
 import cc.carm.outsource.plugin.fishcontest.command.MainCommand;
 import cc.carm.outsource.plugin.fishcontest.conf.PluginConfig;
 import cc.carm.outsource.plugin.fishcontest.conf.PluginMessages;
+import cc.carm.outsource.plugin.fishcontest.hook.PluginExpansion;
 import cc.carm.outsource.plugin.fishcontest.listener.FishListener;
 import cc.carm.outsource.plugin.fishcontest.manager.ContestManager;
 import org.bstats.bukkit.Metrics;
@@ -51,6 +53,10 @@ public class Main extends EasyPlugin implements Listener {
 
         log("注册指令...");
         registerCommand(getName(), new MainCommand(this));
+
+        if (MessageUtils.hasPlaceholderAPI()) {
+            new PluginExpansion(this, getName()).register();
+        }
 
         if (PluginConfig.METRICS.getNotNull()) {
             log("启用统计数据...");

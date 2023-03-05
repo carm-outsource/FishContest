@@ -70,6 +70,21 @@
 - 此操作将不会结算比赛奖励！
 ```
 
+## 变量 (PlaceholderAPI)
+
+安装 [PlaceholderAPI](https://github.com/PlaceholderAPI/PlaceholderAPI) 后，可以输入 `/papi info FishContest` 查看相关变量。
+
+变量内容如下
+
+```text
+# %FishContest_remain_time% 
+- 得到当前正在执行的比赛的剩余时间，以 时分秒 的格式显示。
+# %FishContest_remain_seconds% 
+- 得到当前正在执行的比赛的剩余秒数。
+# %FishContest_remain_percentage% 
+- 得到当前正在执行的比赛的剩余时间百分比(0~1)。
+```
+
 ## 配置
 
 ### 插件配置文件 ([config.yml]())

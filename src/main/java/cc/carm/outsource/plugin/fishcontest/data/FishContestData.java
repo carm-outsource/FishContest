@@ -51,6 +51,10 @@ public class FishContestData {
         this.endMillis = endMillis;
     }
 
+    public long getRemainMillis() {
+        return endMillis - System.currentTimeMillis();
+    }
+
     public boolean isEnded() {
         return System.currentTimeMillis() > getEndMillis();
     }
