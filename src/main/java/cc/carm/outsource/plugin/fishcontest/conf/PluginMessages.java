@@ -24,7 +24,8 @@ import java.util.function.BiFunction;
 @HeaderComment({
         "钓鱼大赛插件的消息配置文件",
         "如特定的消息不需要任何提示，可直接留下单行空内容消息。",
-        "支持 支持 &+颜色代码(原版颜色)、§(#XXXXXX)(RGB颜色) 与 &<#XXXXXX>(前后标注RGB颜色渐变)。",
+        "支持 &+颜色代码(原版颜色)、§(#XXXXXX)(RGB颜色) 与 &<#XXXXXX>(前后标注RGB颜色渐变)。",
+        "支持 MineDown 语法，详见 https://github.com/Phoenix616/MineDown 。",
         " "
 })
 public class PluginMessages extends ConfigurationRoot {
