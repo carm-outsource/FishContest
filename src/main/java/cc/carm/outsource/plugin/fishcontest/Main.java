@@ -54,14 +54,14 @@ public class Main extends EasyPlugin implements Listener {
 
         if (PluginConfig.METRICS.getNotNull()) {
             log("启用统计数据...");
-            Metrics metrics = new Metrics(this, 14459);
+            Metrics metrics = new Metrics(this, 17847);
             metrics.addCustomChart(new SimplePie("log_enabled", () -> PluginConfig.LOGGER.ENABLE.getNotNull().toString()));
             metrics.addCustomChart(new SimplePie("log_method", PluginConfig.LOGGER.METHOD::getNotNull));
         }
 
         if (PluginConfig.CHECK_UPDATE.getNotNull()) {
             log("开始检查更新...");
-            getScheduler().runAsync(GHUpdateChecker.runner(this));
+            GHUpdateChecker.run(this);
         } else {
             log("已禁用检查更新，跳过。");
         }
