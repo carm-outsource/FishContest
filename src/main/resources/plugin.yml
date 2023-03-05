@@ -1,0 +1,27 @@
+main: ${project.package}.Main
+name: ${project.name}
+version: ${project.version}
+website: ${project.url}
+description: ${project.description}
+
+authors:
+  - CarmJos
+  - YuanYuanOwO
+
+api-version: 1.18
+
+softdepend:
+  - PlaceholderAPI
+
+permissions:
+  "FishContest.admin":
+    description: "插件的管理员权限节点"
+    default: op
+
+commands:
+  "FishContest":
+    description: "插件的主命令，用于重载插件或操作钓鱼比赛等。"
+    permission: "FishContest.admin"
+    usage: "/FishContest help"
+    aliases:
+      - fc

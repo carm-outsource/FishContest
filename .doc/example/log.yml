@@ -1,0 +1,27 @@
+# 此为初期开发阶段比赛结果的记录文件,仅供参考。
+version: 1.0
+
+id: 20220420050122 # 比赛的ID （为开始的时间)
+duration: 3000 # 比赛的持续时间(单位:秒)
+type: SUM # 比赛的类型
+
+operator: 1645f6ac-8d61-4a45-8f4c-d937c34dee7d # 比赛操作者
+
+leaderboard: # 排行数据
+  1:
+    name: CUMR
+    uuid: 1645f6ac-8d61-4a45-8f4c-d937c34dee7d
+    items: # 该玩家本次比赛中所获得的物品
+      - "SALMON;1152"
+      - "PUFFERFISH;1"
+      - "SALMON;144"
+    reward: # 为该玩家执行的对应指令，若该字段为空则代表此玩家不在线，放弃了奖励
+      - "give CUMR apple 64"
+  2:
+    name: LyzenX
+    uuid: 6d94ccb4-4e32-4120-be3d-c99af0e7ba14
+    items:
+      - "SALMON;755"
+      - "SALMON;144"
+    reward:
+      - "give LyzenX stone 32"

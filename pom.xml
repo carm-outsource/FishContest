@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <project.jdk.version>17</project.jdk.version>
+        <project.package>${project.groupId}.plugin.${project.artifactId}</project.package>
+
+        <maven.compiler.source>${project.jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${project.jdk.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+
+        <deps.easyplugin.version>1.5.2</deps.easyplugin.version>
+        <deps.easylistener.version>2.0.1</deps.easylistener.version>
+        <deps.minesql.version>1.3.1</deps.minesql.version>
+        <deps.mineconfig.version>2.4.0</deps.mineconfig.version>
+    </properties>
+    <groupId>cc.carm.outsource</groupId>
+    <artifactId>fishcontest</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>FishContest</name>
+    <description>钓鱼大赛。</description>
+    <url>https://github.com/carm-outsource/FishContest</url>
+
+    <organization>
+        <name>carm-outsource</name>
+        <url>https://github.com/carm-outsource</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>CarmJos</id>
+            <name>Carm Jos</name>
+            <email>carm@carm.cc</email>
+            <url>https://www.carm.cc</url>
+            <roles>
+                <role>Main Developer</role>
+                <role>Designer</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>YuanYuanOwO</id>
+            <name>YuanYuan</name>
+            <email>yuanyuanowo@gmail.com</email>
+            <roles>
+                <role>Designer</role>
+                <role>Translator</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/carm-outsource/AnvilLimiter/actions/workflows/maven.yml</url>
+    </ciManagement>
+
+    <distributionManagement>
+        <downloadUrl>https://github.com/carm-outsource/AnvilLimiter/releases</downloadUrl>
+    </distributionManagement>
+
+    <repositories>
+
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+
+        <repository>
+            <id>purpur</id>
+            <url>https://repo.purpurmc.org/snapshots</url>
+        </repository>
+
+        <repository>
+            <id>nexus</id>
+            <url>https://mvn.lumine.io/repository/maven-public/</url>
+        </repository>
+
+        <repository>
+            <id>carm-repo</id>
+            <name>Carm's Repo</name>
+            <url>https://repo.carm.cc/repository/maven-public/</url>
+        </repository>
+
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>cc.carm.lib</groupId>
+            <artifactId>easyplugin-main</artifactId>
+            <version>${deps.easyplugin.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.carm.lib</groupId>
+            <artifactId>easyplugin-command</artifactId>
+            <version>${deps.easyplugin.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.carm.lib</groupId>
+            <artifactId>easyplugin-gui</artifactId>
+            <version>${deps.easyplugin.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.carm.lib</groupId>
+            <artifactId>easyplugin-placeholderapi</artifactId>
+            <version>${deps.easyplugin.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.carm.lib</groupId>
+            <artifactId>easylistener</artifactId>
+            <version>${deps.easylistener.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!--suppress VulnerableLibrariesLocal -->
+        <dependency>
+            <groupId>cc.carm.lib</groupId>
+            <artifactId>easyplugin-githubchecker</artifactId>
+            <version>${deps.easyplugin.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.carm.plugin</groupId>
+            <artifactId>minesql-api</artifactId>
+            <version>${deps.minesql.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.carm.lib</groupId>
+            <artifactId>mineconfiguration-bukkit</artifactId>
+            <version>${deps.mineconfig.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>de.themoep</groupId>
+            <artifactId>minedown</artifactId>
+            <version>1.7.1-SNAPSHOT</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.18.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.10.9</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.0.0</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.0.19</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jcommon</artifactId>
+            <version>1.0.16</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>23.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${project.basedir}/.asset/</directory>
+                            <useDefaultExcludes>true</useDefaultExcludes>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                        </fileset>
+                        <fileset>
+                            <directory>${project.basedir}/api-docs/</directory>
+                            <useDefaultExcludes>true</useDefaultExcludes>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${project.jdk.version}</source>
+                    <target>${project.jdk.version}</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArgument>-parameters</compilerArgument>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <finalName>${project.name}-${project.version}</finalName>
+                    <outputDirectory>${project.basedir}/.asset</outputDirectory>
+                    <minimizeJar>true</minimizeJar>
+                    <relocations>
+                        <relocation>
+                            <pattern>cc.carm.lib.configuration</pattern>
+                            <shadedPattern>${project.package}.lib.configuration</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>cc.carm.lib.easyplugin</pattern>
+                            <shadedPattern>${project.package}.lib.easyplugin</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>cc.carm.lib.mineconfiguration</pattern>
+                            <shadedPattern>${project.package}.lib.configuration</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>de.themoep.minedown</pattern>
+                            <shadedPattern>cc.carm.plugin.moeteleport.lib.minedown</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <shadedPattern>cc.carm.plugin.moeteleport.lib.bstats</shadedPattern>
+                        </relocation>
+                    </relocations>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/MANIFEST.MF</exclude>
+                                <exclude>META-INF/*.txt</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+</project>

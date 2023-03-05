@@ -1,0 +1,73 @@
+# 此文件为1.0开发阶段的测试配置文件
+version: 1.0
+
+# 比赛结果记录
+logger:
+  method: "YAML"
+
+# 计量单位配置，满则进位，不满最小则不记
+# 如 206 记为 4两1钱
+measurement:
+  empty: "难以计量" #当不满足最低单位或未配置份额时显示的名称
+  levels:
+    5: "钱"
+    50: "两"
+    500: "斤"
+
+#物品配置
+items:
+  "SALMON":
+    item:
+      type: "SALMON" # 物品类型
+      name: "鲑鱼" # 物品名称
+      lore: # 额外的lore
+        - " "
+        - " &7重量 &a%(quantity)" # 支持变量
+        - " &7渔者 &a%player_name%" # 支持Papi变量
+        - " "
+        - "这是一条神奇的鲑鱼"
+    # 随机权重配置
+    # 玩家在比赛中钓出该物品的概率为当前群系的 [ 该物品的权重 ÷ 所有物品的权重总和 ]
+    weights:
+      default: 30
+      biomes: # 针对区块有不同的随机权重
+        "OCEAN": "15"
+
+    # 份额配置，若不配置份额则不会计入到比赛中
+    # 支持通过最小值、中间值、最大值去随机出用于计量的份额
+    # 格式： [fixed-amount] 或 [min;max] 或 正态分布 [min;avg;max(;square)]
+    quantity:
+      default: "200"
+      biomes: # 针对群系有不同的随机重量范围
+        "OCEAN": "120;2000"
+        "DEEP_OCEAN": "400;600;2000"
+
+  "PUFFERFISH":
+    item:
+      type: "PUFFERFISH"
+      name: "&e&l滑稽果"
+      lore:
+        - "&e滑稽树上滑稽果"
+        - "&e滑稽树下你和我"
+        - "&e滑稽树旁做游戏"
+        - "&e欢乐多又多"
+    weights:
+      default: 1
+
+# 自动开启比赛功能
+schedule:
+  enable: false
+  time:
+    - "09:00:00"
+  requirements:
+    minimum-players: 5 # 至少需要几名玩家在线
+
+contest:
+  type: SUM # 默认的比赛类型，可选 SUM(总量排行) 或 MAX(最值排行)
+  duration: 300 # 默认的比赛时间(单位：秒)
+
+  prizes: # 默认的奖励内容 (指令形式)
+    1: # 给第一名的奖励
+      - "give %player_name% apple 64"
+    2: # 给第二名的奖励
+      - "give %player_name% stone 32"
