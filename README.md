@@ -11,7 +11,7 @@
 ![CodeSize](https://img.shields.io/github/languages/code-size/carm-outsource/FishContest)
 [![Download](https://img.shields.io/github/downloads/carm-outsource/FishContest/total)](https://github.com/carm-outsource/FishContest/releases)
 [![Java CI with Maven](https://github.com/carm-outsource/FishContest/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/carm-outsource/FishContest/actions/workflows/maven.yml)
-![Support](https://img.shields.io/badge/Minecraft-Java%201.13--Latest-blue)
+![Support](https://img.shields.io/badge/Minecraft-Java%201.18--Latest-yellow)
 ![](https://visitor-badge.glitch.me/badge?page_id=FishContest.readme)
 
 
