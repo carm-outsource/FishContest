@@ -65,6 +65,11 @@
     <repositories>
 
         <repository>
+            <id>oss-repo</id>
+            <url>https://s01.oss.sonatype.org/content/groups/public/</url>
+        </repository>
+
+        <repository>
             <id>central</id>
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
@@ -77,6 +82,21 @@
         <repository>
             <id>nexus</id>
             <url>https://mvn.lumine.io/repository/maven-public/</url>
+        </repository>
+
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+        <repository>
+            <id>placeholder-api-repo</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+
+        <repository>
+            <id>minebench-repo</id>
+            <url>https://repo.minebench.de/</url>
         </repository>
 
         <repository>
