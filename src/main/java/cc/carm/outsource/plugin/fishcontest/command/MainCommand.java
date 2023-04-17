@@ -5,6 +5,7 @@ import cc.carm.outsource.plugin.fishcontest.command.sub.StartCommand;
 import cc.carm.outsource.plugin.fishcontest.command.sub.StatsCommand;
 import cc.carm.outsource.plugin.fishcontest.command.sub.StopCommand;
 import cc.carm.outsource.plugin.fishcontest.command.sub.SuspendCommand;
+import cc.carm.outsource.plugin.fishcontest.command.sub.ReloadCommand;
 import cc.carm.outsource.plugin.fishcontest.conf.PluginMessages;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,6 +20,7 @@ public class MainCommand extends CommandHandler {
         registerSubCommand(new StartCommand(this, "start", "begin"));
         registerSubCommand(new StopCommand(this, "stop", "end"));
         registerSubCommand(new SuspendCommand(this, "suspend"));
+        registerSubCommand(new ReloadCommand(this, "reload"));
     }
 
     public boolean hasAdminPermission(CommandSender sender) {

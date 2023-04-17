@@ -73,6 +73,8 @@ public class PluginMessages extends ConfigurationRoot {
                     "&8-&7 查看当前的比赛进度。",
                     "&8#&f stop",
                     "&8-&7 结束并结算目前正在进行的钓鱼大赛。",
+                    "&8#&f reload",
+                    "&8-&7 重载插件的配置文件。",
                     "&8#&f suspend",
                     "&8-&7 终止目前正在进行的钓鱼大赛。",
                     "&8-&7&o 此操作将不会结算比赛奖励！"
