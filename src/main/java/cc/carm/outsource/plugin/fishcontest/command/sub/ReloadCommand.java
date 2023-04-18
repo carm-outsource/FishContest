@@ -17,6 +17,11 @@ public class ReloadCommand extends SubCommand<MainCommand> {
     @Override
     public Void execute(JavaPlugin plugin, CommandSender sender, String[] args) {
 
+        if (Main.getContestManager().getRunningContest() == null) {
+            PluginMessages.COMMAND.CONTEST.HAS_RUNNING_CONTEST.send(sender);
+            return null;
+        }
+
         PluginMessages.COMMAND.RELOAD.START.send(sender);
         long s1 = System.currentTimeMillis();
 

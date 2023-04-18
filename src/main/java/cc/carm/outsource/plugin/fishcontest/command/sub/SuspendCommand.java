@@ -18,7 +18,7 @@ public class SuspendCommand extends SubCommand<MainCommand> {
     public Void execute(JavaPlugin plugin, CommandSender sender, String[] args) throws Exception {
 
         if (Main.getContestManager().getRunningContest() == null) {
-            PluginMessages.COMMAND.CONTEST.NO_RUMNING_CONTEST.send(sender);
+            PluginMessages.COMMAND.CONTEST.NO_RUNNING_CONTEST.send(sender);
             return null;
         }
 

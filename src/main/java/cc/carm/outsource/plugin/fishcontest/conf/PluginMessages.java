@@ -100,7 +100,11 @@ public class PluginMessages extends ConfigurationRoot {
 
         public static class CONTEST extends ConfigurationRoot {
 
-            public static final ConfiguredMessageList<BaseComponent[]> NO_RUMNING_CONTEST = list().defaults(
+            public static final ConfiguredMessageList<BaseComponent[]> HAS_RUNNING_CONTEST = list().defaults(
+                    "&f当前有一场正在进行的钓鱼大赛。"
+            ).build();
+
+            public static final ConfiguredMessageList<BaseComponent[]> NO_RUNNING_CONTEST = list().defaults(
                     "&f当前没有正在进行的钓鱼大赛。"
             ).build();
 
