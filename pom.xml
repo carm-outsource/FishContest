@@ -15,7 +15,7 @@
         <deps.easyplugin.version>1.5.12</deps.easyplugin.version>
         <deps.easylistener.version>2.0.1</deps.easylistener.version>
         <deps.minesql.version>1.4.1</deps.minesql.version>
-        <deps.mineconfig.version>2.5.1</deps.mineconfig.version>
+        <deps.mineconfig.version>2.9.3</deps.mineconfig.version>
     </properties>
     <groupId>cc.carm.outsource</groupId>
     <artifactId>fishcontest</artifactId>
